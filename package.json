@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "build": "webpack",
+    "build:prod": "webpack --config webpack.prod.config.js --mode production",
+    "dev": "npm run webpack -- --mode development --watch",
+    "build2": "npm run build:prod -- --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nailya",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.8.24"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Конвертер валют онлайн</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading"><span>Loading....</span></div>
+<div class="main-container ">
+    <div class="header">
+        <h1>Конвертер валют онлайн</h1>
+    </div>
+    <div class="all-container">
+        <div class="first box">
+            <div><p>У меня есть</p></div>
+            <div><p>Хочу приобрести</p></div>
+        </div>
+
+        <div class="second box positionbox">
+            <div>
+                <div class="box section-valuta">
+                   <div class="from_button">RUB</div>
+                   <div class="from_button">USD</div>
+                   <div class="from_button">EUR</div>
+                   <div class="from_button">GBP</div>
+                   <div class="selectbox">
+                    <select name="country" id="selectValue_from" class="select-value" onchange="chooseValuta(this)" onclick="changeDesign(this)"> 
+                        <option value="EUR">EUR</option> 
+                        <option value="GBP">GBP</option>
+                        <option value="HKD">HKD</option> 
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option> 
+                        <option value="DKK">DKK</option>
+                        <option value="INR">INR</option> 
+                        <option value="CHF">CHF</option>
+                        <option value="MXN">MXN</option> 
+                        <option value="CZK">CZK</option>
+                        <option value="SGD">SGD</option> 
+                        <option value="THB">THB</option>
+                        <option value="HRK">HRK</option> 
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option> 
+                        <option value="CNY">CNY</option>
+                        <option value="BGN">BGN</option> 
+                        <option value="PHP">PHP</option>
+                        <option value="SEK">SEK</option> 
+                        <option value="PLN">PLN</option>
+                        <option value="ZAR">ZAR</option> 
+                        <option value="CAD">CAD</option>
+                        <option value="ISK">ISK</option> 
+                        <option value="BRL">BRL</option>
+                        <option value="RON">RON</option> 
+                        <option value="NZD">NZD</option>
+                        <option value="TRY">TRY</option> 
+                        <option value="JPY">JPY</option>
+                        <option value="RUB">RUB</option> 
+                        <option value="KRW">KRW</option>
+                        <option value="USD">USD</option>
+                        <option value="HUF">HUF</option>
+                        <option value="AUD">AUD</option>                      
+                    </select>
+                   </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="box section-valuta">
+                       <div class="to_button">RUB</div>
+                       <div class="to_button">USD</div>
+                       <div class="to_button">EUR</div>
+                       <div class="to_button">GBP</div>
+                       <div>
+                        <select name="country" id="selectValue_to" class="select-value" onchange="chooseValuta(this)"> 
+                            <option value="EUR">EUR</option> 
+                            <option value="GBP">GBP</option>
+                            <option value="HKD">HKD</option> 
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option> 
+                            <option value="DKK">DKK</option>
+                            <option value="INR">INR</option> 
+                            <option value="CHF">CHF</option>
+                            <option value="MXN">MXN</option> 
+                            <option value="CZK">CZK</option>
+                            <option value="SGD">SGD</option> 
+                            <option value="THB">THB</option>
+                            <option value="HRK">HRK</option> 
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option> 
+                            <option value="CNY">CNY</option>
+                            <option value="BGN">BGN</option> 
+                            <option value="PHP">PHP</option>
+                            <option value="SEK">SEK</option> 
+                            <option value="PLN">PLN</option>
+                            <option value="ZAR">ZAR</option> 
+                            <option value="CAD">CAD</option>
+                            <option value="ISK">ISK</option> 
+                            <option value="BRL">BRL</option>
+                            <option value="RON">RON</option> 
+                            <option value="NZD">NZD</option>
+                            <option value="TRY">TRY</option> 
+                            <option value="JPY">JPY</option>
+                            <option value="RUB">RUB</option> 
+                            <option value="KRW">KRW</option>
+                            <option value="USD">USD</option>
+                            <option value="HUF">HUF</option>
+                            <option value="AUD">AUD</option>               
+                        </select>
+                       </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="box positionbox">
+            <div >
+                <form>
+                    <input type="text" name="" class="left_input input" id="left_input">
+                </form>
+                <p id="value_l"></p>
+            </div>
+            <div>
+                <div id="arrow_right" class="nese">
+                    <img src="image/arrow.png" alt="arrowright"/>
+                </div>
+                <div id="arrow_left" class="nese">
+                    <img src="image/arrowleft.png" alt="arrowleft"/>
+                </div>
+            </div>
+            <div>
+                <div >
+                    <div >
+                        <form>
+                            <input type="text" name="" class="right_input input" id="right_input">
+                        </form>
+                        <p id="value_r"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="script.js"></script>
+</body>    
+</html>
