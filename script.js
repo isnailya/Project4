@@ -254,9 +254,17 @@ function calculateExchange_left()
 //       alert('Mistake');
 //       errorBrat = true;
 //    });
+timeout().then(currencies => {
+   console.log(currencies);
+   var element = document.getElementById('loading');
+   //if(element.classList=='hidden')
+   element.style.visibility    = "hidden";
+   });
 
 
-   fetch(getNewLink(strValueFrom,strValueTo))
+   
+
+fetch(getNewLink(strValueFrom,strValueTo))
   .then(function(response) {
     return response.json();
   })
@@ -271,17 +279,37 @@ function calculateExchange_left()
     valueR.innerHTML= '1 '+ strValueTo +' =' + 1/Object.values(json.rates) +' '  + strValueFrom;
     //return json;
   })
+  .then()
   .catch((error) => {
      alert('Mistake');
   });
+
+
   
    
 }
+
+function timeout() {
+   var element = document.getElementById('loading');
+   //if(!timeoutSetted)
+   element.style.visibility='visible';
+   return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(2),300);
+    })
+ }
 
 
 
 function calculateExchange_right()
 {
+
+   timeout().then(currencies => {
+      console.log(currencies);
+      var element = document.getElementById('loading');
+      //if(element.classList=='hidden')
+      element.style.visibility    = "hidden";
+      });
+
    fetch(getNewLink(strValueTo,strValueFrom))
   .then(function(response) {
     return response.json();
@@ -327,6 +355,8 @@ let event = new Event('input', {
 
 });
 
+
+
 //call event handler in first start (called once in start)
 updateValue(event);
 
@@ -335,6 +365,7 @@ function updateValue(evt)
   
    let a =  evt.target;
 if( a!=null ){
+  if(evt.target.value!=null)
    evt.target.value = evt.target.value.replace(/,/g, '.');  
   if(a.id == 'left_input')
   {
